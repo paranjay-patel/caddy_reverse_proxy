@@ -1,0 +1,31 @@
+-without header directive, it also works.
+-make Caddyfile -> go config/caddy/autosave.json in caddy container -> copy json file from thier which created by caddy automatically
+
+{
+	"apps":{
+		"http":{
+			"servers":{
+				"srv0":{
+					"listen":[":443"],
+					"routes":[{
+						"handle":[{
+							"handler":"subroute",
+							"routes":[{
+								"handle":[{
+									"handler":"reverse_proxy",
+									"upstreams":[{
+										"dial":"app:3005"
+									}]
+								}]
+							}]
+						}],
+					"match":[{
+						"host":["paranjay-test.logicwind.co"]
+					}],
+					"terminal":true
+					}]
+				}
+			}
+		}
+	}
+}
