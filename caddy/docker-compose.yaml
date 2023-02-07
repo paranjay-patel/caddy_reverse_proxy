@@ -10,10 +10,11 @@ services:
       - ./site:/srv
       - caddy_config:/config
       - caddy_data:/data
-     # - ./Caddyfile:/etc/caddy/Caddyfile
-      - ./caddy.json:/etc/caddy/caddy.json
+     # - ./Caddyfile:/etc/caddy/Caddyfile    
+      - ./caddy.json:/etc/caddy/caddy.json 
     command: caddy run --config /etc/caddy/caddy.json
-    #paranjay-test.logicwind.co
+    #if we use caddy.json then we need to use caddy run --config /etc/caddy/caddy.json
+    if we use Caddyfile then not need to run cadd.json
     networks:
     - utags
 
