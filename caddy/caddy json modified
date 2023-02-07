@@ -1,5 +1,6 @@
 -without header directive, it also works.
 -make Caddyfile -> go config/caddy/autosave.json in caddy container -> copy json file from thier which created by caddy automatically
+-this will automatically do 'https', we just have to specify domain name
 
 {
 	"apps":{
