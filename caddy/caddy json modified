@@ -21,7 +21,7 @@
 							}]
 						}],
 					"match":[{
-						"host":["paranjay-test.logicwind.co"]
+						"host":["paranjay-test.com"]
 					}],
 					"terminal":true
 					}]
