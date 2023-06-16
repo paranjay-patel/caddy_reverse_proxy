@@ -13,12 +13,12 @@ services:
     ports:
       - "5432:5432"
     networks:
-     - utags
+     - mynetwork
 
 volumes:
   data:
 
 networks:
-  utags:
-    name: utags
+  mynetwork:
+    name: mynetwork
     external: true
